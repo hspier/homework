@@ -1,0 +1,21 @@
+@import 'common'; 
+
+:host {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: $large-spacing;
+}
+
+.medias {
+    &__title {
+        margin: 0;
+        padding: $medium-spacing;
+    }
+
+    &__posts {
+        display: flex;
+    }
+    
+}

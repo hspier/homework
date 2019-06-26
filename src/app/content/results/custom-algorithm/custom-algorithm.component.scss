@@ -1,0 +1,21 @@
+@import 'common';
+
+.custom {
+    &__ratio {
+        font-size: 1rem;
+        -webkit-appearance: none;
+        border-style: solid;
+        padding: $small-spacing;
+        margin-bottom: $small-spacing;
+        border-radius: 0;
+        border-width: 1px;
+        width: 3rem;
+        border-color: $border-color;
+
+        &::-webkit-inner-spin-button, 
+        &::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div *ngIf="stockResults" class="results__header">
+    <h2 class="header__title">Recommendations</h2>
+    <div class="header__algorithm">
+        <span class="algorithm__title">Algorithm:&nbsp;</span>
+        <input id="algorithm-default" type="radio" [(ngModel)]="radioValue" value="default" name="algorithm"><label class="algorithm__title" for="algorithm-default">Default</label>
+        <input id="algorithm-custom" type="radio" [(ngModel)]="radioValue" value="custom" name="algorithm"><label class="algorithm__title" for="algorithm-custom">Custom</label>
+    </div>
+    <div class="header__configuration" [ngSwitch]="radioValue">
+        <app-default-algorithm *ngSwitchCase="'default'" (dataChange)="onAlgorithmDataChanged($event)"></app-default-algorithm>
+        <app-custom-algorithm *ngSwitchCase="'custom'" (dataChange)="onAlgorithmDataChanged($event)"></app-custom-algorithm>
+    </div>
+</div>
+<div class="results__content">
+    <div class="result" *ngFor="let result of stockResults">
+        <div class="result__symbol">{{result.symbol}}</div>
+        <div class="result__date">{{result.date.toLocaleDateString()}}</div>
+        <div class="result__rating">
+            <div class="rating" [ngClass]="result.ratingClass">
+                <span class="rating__icon">{{result.ratingIcon}}</span>
+                <span>{{result.ratingText}}</span>
+            </div>
+        </div>
+    </div>
+</div>

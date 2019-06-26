@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'common';
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder {
+    color:    $light-text-color;
+    opacity:  1;
+}
+
+:-ms-input-placeholder {
+   color:    $light-text-color;
+}
+::-ms-input-placeholder {
+   color:    $light-text-color;
+}
+
+::placeholder {
+   color:    $light-text-color;
+}

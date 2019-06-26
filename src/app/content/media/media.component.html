@@ -1,0 +1,12 @@
+<h3 class="network__title">{{network?.name}}</h3>
+<span class="network__label">Posts:&nbsp;</span>
+<select class="network__count" [ngModel]="count" (ngModelChange)="onPostsCountChanged($event)">
+    <option *ngFor="let option of options" [value]="option">{{option}}</option>
+</select>
+<section class="network__posts">
+    <div *ngFor="let post of posts" class="post">
+        <img class="post__image" [src]="post.logo" *ngIf="post.logo">
+        <h4 class="post__title">{{post.title}}</h4>
+        <p class="post__description">{{post.description}}</p>
+    </div>
+</section>

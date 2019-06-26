@@ -1,0 +1,93 @@
+@import 'common';
+
+:host {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.results {
+    &__content {
+        clear: both;
+        position: relative;
+    }
+}
+
+.header {
+    &__title {
+        margin: $medium-spacing 0;
+        padding: 0 $medium-spacing;
+        float: left;
+    }
+    
+    &__algorithm {
+        float: right;
+        vertical-align: middle;
+        margin: $medium-spacing 0;
+        padding-right: $medium-spacing;
+    }
+
+    &__configuration {
+        clear: both;
+        text-align: right;
+        padding-right: $medium-spacing;
+    }
+}
+
+.result {
+    margin: 0 $medium-spacing;
+    padding: 0 $medium-spacing;
+    border-bottom: 1px solid $border-color; 
+    display: flex;
+    align-items: center;
+
+    &:nth-of-type(odd) {
+        background-color: $light-results-color;
+    }
+    
+    &__symbol {
+        flex: 1;
+    }
+
+    &__date {
+        flex: 1;
+    }
+
+    &__rating {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.rating {
+    display: inline-block;
+    padding: $small-spacing;
+    border-radius: 4px;
+    color: $inverted-text-color;
+    min-width: 5rem;
+    margin: $small-spacing; 
+
+    &__icon {
+        padding-right: $small-spacing;
+    }
+
+    &--buy {
+        background-color: $rating-buy-background-color;
+    }
+
+    &--hold {
+        background-color: $rating-hold-background-color;
+    }
+
+    &--sell {
+        background-color: $rating-sell-background-color;
+    }
+}
+
+.algorithm {
+    &__title {
+        padding-left: $small-spacing;
+        vertical-align: middle;
+        padding-right: $medium-spacing;
+    }
+}

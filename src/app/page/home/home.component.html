@@ -1,0 +1,6 @@
+<app-form class="home__form" [networks]="networks" (criteriaChange)="onCriteriaChanged($event)"></app-form>
+<section class="home__content">
+    <app-results [results]="results" (algorithmChange)="onAlgorithmChanged($event)"></app-results>
+    <app-medias *ngIf="currentSymbol" [medias]="medias"></app-medias>
+    <app-loading></app-loading>
+</section>

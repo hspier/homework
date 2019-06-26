@@ -1,0 +1,8 @@
+<input id="search-symbol" class="form__symbol" type="search" placeholder="Enter stock symbol" [ngModel]="symbol" (ngModelChange)="onSymbolModelChanged($event)" (keyup.enter)="onSymbolEnterPressed()">
+<label class="form__label" for="timeperiod">Period:&nbsp;</label>
+<input class="form__time" type="number" id="timeperiod" min="1" max="999" [ngModel]="timePeriod" (ngModelChange)="onTimePeriodModelChanged($event)">
+<span class="form__label">&nbsp;days&nbsp;</span>
+<br/>
+<button class="form__media" *ngFor="let network of networksInformation" (click)="onMediaClicked(network)" [ngClass]="{'form__media--active': network.active}">
+    {{network.name}}<span *ngIf="network.count !== null">&nbsp;-&nbsp;{{network.count}} posts</span>
+</button>

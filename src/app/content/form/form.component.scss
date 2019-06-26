@@ -1,0 +1,65 @@
+@import 'common';
+
+.form {
+    &__media {
+        padding: $medium-spacing;
+        margin: $medium-spacing / 2;
+        background-color: $button-background-color;
+        color: $active-button-background-color;
+        border-color: $active-button-background-color;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:first-of-type {
+            margin-left: $medium-spacing;
+        }
+        &:last-of-type {
+            margin-right: $medium-spacing;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: darken($button-background-color, 10);
+        }
+
+        &--active.form__media {
+            background-color: $active-button-background-color;
+            color: $active-button-color;
+
+            &:focus,
+            &:hover {
+                background-color: darken($active-button-background-color, 10);
+            }
+        }
+    }
+
+    &__symbol {
+        font-size: 1rem;
+        -webkit-appearance: none;
+        border-style: solid;
+        margin: $medium-spacing 2 * $large-spacing $small-spacing $medium-spacing;
+        padding: $small-spacing;
+        border-radius: 0;
+        border-width: 1px;
+        border-color: $border-color; 
+    }
+
+    &__time {
+        font-size: 1rem;
+        -webkit-appearance: none;
+        border-style: solid;
+        margin: $medium-spacing 0 $small-spacing;
+        padding: $small-spacing;
+        width: 1.8rem;
+        text-align: right;
+        border-radius: 0;
+        border-width: 1px;
+        border-color: $border-color;
+
+        &::-webkit-inner-spin-button, 
+        &::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+    }
+}

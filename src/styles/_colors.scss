@@ -1,0 +1,19 @@
+$text-color: #333;
+$light-text-color: #7f7f7f;
+$inverted-text-color: #fff;
+
+$brand-color: #45b6f2;
+
+$border-color: #dfdfdf;
+
+$button-background-color: #fff;
+$active-button-color: #fff;
+$active-button-background-color: darken($brand-color, 20); 
+
+$light-results-color: #efefef;
+
+$loading-back-color: #cfcfcf;
+
+$rating-buy-background-color: darken(#8cc22e, 10);
+$rating-hold-background-color: #e66968;
+$rating-sell-background-color: darken($brand-color, 20);

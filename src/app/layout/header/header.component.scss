@@ -1,0 +1,17 @@
+@import "common";
+
+:host {
+    background-color: $brand-color;
+    display: block;
+    padding: $medium-spacing;
+}
+
+.header {  
+    &__title {
+        margin: 0;
+        padding: 0 $medium-spacing;
+        display: inline-block;
+        vertical-align: top;
+        color: $text-color;
+    }
+}

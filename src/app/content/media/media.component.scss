@@ -1,0 +1,47 @@
+@import 'common';
+
+:host {
+    display: inline-block;
+    width: 33%;
+}
+
+.network {
+    &__title {
+        display: inline-block;
+        padding: 0 $medium-spacing;
+        margin: 0;
+        margin-right: $large-spacing;
+        vertical-align: top;
+    }
+
+    &__label {
+        vertical-align: top;
+        margin-left: $large-spacing;   
+    }
+
+    &__posts {
+        margin: $medium-spacing;
+    }
+}
+
+.post {
+    border: 1px solid $border-color;
+    margin-bottom: $medium-spacing;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        margin: 0;
+        padding: $medium-spacing $medium-spacing $small-spacing;
+    }
+
+    &__description {
+        padding: 0 $medium-spacing $medium-spacing;
+    }
+}
